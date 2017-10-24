@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1a3a398a-9353-4e0a-8693-76b243718109">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<queryString>
+		<![CDATA[select 
+a.PatientID, a.firstname, a.lastname, a.middlename,  a.contactNo, b.nextVisit
+from
+    Patient a
+        inner join
+    Notification b
+        on a.PatientID = b.Notif_ID
+        inner join 
+    Treatment c
+        on b.Notif_ID = c.TreatmentID]]>
+	</queryString>
+	<field name="PatientID" class="java.lang.Object"/>
+	<field name="firstname" class="java.lang.Object"/>
+	<field name="lastname" class="java.lang.Object"/>
+	<field name="middlename" class="java.lang.Object"/>
+	<field name="contactNo" class="java.lang.Object"/>
+	<field name="nextVisit" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="176" y="11" width="182" height="24" uuid="f9a138aa-ac6d-4342-a9c8-a15d5a91cf66"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Patient Next Visit]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<frame>
+				<reportElement x="-19" y="-150" width="589" height="104" uuid="70b5ed2f-e491-4cf7-ba96-71ccf96c38f3"/>
+				<box>
+					<pen lineWidth="7.0" lineColor="#00CC33"/>
+					<topPen lineWidth="7.0" lineColor="#00CC33"/>
+					<leftPen lineWidth="7.0" lineColor="#00CC33"/>
+					<bottomPen lineWidth="7.0" lineColor="#00CC33"/>
+					<rightPen lineWidth="7.0" lineColor="#00CC33"/>
+				</box>
+				<image>
+					<reportElement x="105" y="21" width="390" height="69" uuid="fda3f148-eb7d-4ca1-a893-704b78293383"/>
+					<imageExpression><![CDATA["C:\\Users\\Jekko\\Documents\\NetBeansProjects\\TBDOTS_UI\\src\\tbdots_ui\\ddhlogo.jpg"]]></imageExpression>
+				</image>
+			</frame>
+			<staticText>
+				<reportElement x="409" y="10" width="146" height="41" uuid="d26fc067-bf18-4ee2-bb8d-45afb93c8f1b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Next Visit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="10" width="82" height="41" uuid="fce9b0f6-7031-40a2-afd0-0b682fa0a296"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lastname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="10" width="86" height="41" uuid="58b7c412-9303-4e12-8d74-1d1e1bf7f79b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Middlename]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="10" width="73" height="41" uuid="07b840d8-4eb9-45d3-a0a9-9df5a6494fbb"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firstname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="26" height="41" uuid="3775669d-5fbe-4f76-8282-98b36ded364c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="10" width="68" height="41" uuid="f512c440-f2b9-4b95-a22f-12955fb7bb37"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="66" splitType="Stretch">
+			<textField>
+				<reportElement x="121" y="10" width="86" height="20" uuid="ddefb6c0-9b8f-46ec-a210-684b59488b49"/>
+				<textFieldExpression><![CDATA[$F{middlename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="10" width="26" height="20" uuid="f9d31d3a-ecf4-4134-9b91-b52c84c72297"/>
+				<textFieldExpression><![CDATA[$F{PatientID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="10" width="82" height="20" uuid="dba1c76d-3e8a-4324-a295-64547f9fcb60"/>
+				<textFieldExpression><![CDATA[$F{lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="10" width="68" height="20" uuid="cd206df0-8831-411a-91ae-bcb7e0cf55b8"/>
+				<textFieldExpression><![CDATA[$F{contactNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="38" y="10" width="73" height="20" uuid="497a0e4a-4a18-454c-903c-7eb46197a672"/>
+				<textFieldExpression><![CDATA[$F{firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="409" y="10" width="146" height="20" uuid="2778938d-1d38-48d5-85c9-685245c0a7b6"/>
+				<textFieldExpression><![CDATA[$F{nextVisit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

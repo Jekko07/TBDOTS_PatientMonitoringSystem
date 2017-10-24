@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="515a7b8c-f206-4f81-a4dc-e1afbea12644">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[Select * from Patient]]>
+	</queryString>
+	<field name="PatientID" class="java.lang.Object"/>
+	<field name="firstname" class="java.lang.Object"/>
+	<field name="lastname" class="java.lang.Object"/>
+	<field name="middlename" class="java.lang.Object"/>
+	<field name="Birthdate" class="java.lang.Object"/>
+	<field name="Age" class="java.lang.Object"/>
+	<field name="Sex" class="java.lang.Object"/>
+	<field name="Occupation" class="java.lang.Object"/>
+	<field name="civilStatus" class="java.lang.Object"/>
+	<field name="contactPerson" class="java.lang.Object"/>
+	<field name="contactNo" class="java.lang.Object"/>
+	<field name="address" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch">
+			<frame>
+				<reportElement x="-17" y="-17" width="588" height="105" uuid="c2360211-0ca7-4b71-9239-08a6a726fd6a"/>
+				<box>
+					<pen lineWidth="7.0" lineColor="#00CC33"/>
+					<topPen lineWidth="7.0" lineColor="#00CC33"/>
+					<leftPen lineWidth="7.0" lineColor="#00CC33"/>
+					<bottomPen lineWidth="7.0" lineColor="#00CC33"/>
+					<rightPen lineWidth="7.0" lineColor="#00CC33"/>
+				</box>
+				<image>
+					<reportElement x="119" y="20" width="390" height="69" uuid="cf9f3de5-4770-49dd-909d-35a7178b26de"/>
+					<imageExpression><![CDATA["C:\\Users\\Jekko\\Documents\\NetBeansProjects\\TBDOTS_UI\\src\\tbdots_ui\\ddhlogo.jpg"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="211" y="0" width="120" height="24" uuid="6ae098c7-24e2-4f80-b9f0-59c58a8a6a71"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Patient List]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="314" y="0" width="58" height="41" uuid="9f2ac832-014c-4380-b3b1-68037016e2db"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Birthdate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="0" width="30" height="41" uuid="f921b404-ce69-4bd9-927b-d823d7b8ab74"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="0" width="80" height="41" uuid="91f7d0af-3bad-4195-8c23-19a411e2f648"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lastname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="86" height="41" uuid="8562b217-a099-42d6-bb2d-d294582fed5b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Middlename]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="0" width="25" height="41" uuid="17ab0bb3-dbcd-4922-aed6-1dee41a0f63a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sex]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="0" width="83" height="41" uuid="66e12f9e-002d-468b-a4aa-e260e5d35f8d"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firstname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="0" width="133" height="41" uuid="fcee10a3-102b-4fe4-bd76-9514c65ae49f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="26" height="41" uuid="bfa10e4c-46e0-4712-9867-57210960c1a0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="28" y="10" width="83" height="20" uuid="8eaa2957-2626-4888-813e-42b43f252acc"/>
+				<textFieldExpression><![CDATA[$F{firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="10" width="86" height="20" uuid="4de8427f-2abc-40b3-b262-b90f782bc54f"/>
+				<textFieldExpression><![CDATA[$F{middlename}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="10" width="80" height="20" uuid="d9bb498e-f51c-4942-a317-36832c9373e7"/>
+				<textFieldExpression><![CDATA[$F{lastname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="10" width="25" height="20" uuid="348bfc80-363c-4bf7-b09e-95b83e576524"/>
+				<textFieldExpression><![CDATA[$F{Sex}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="10" width="58" height="20" uuid="f14a7b35-0cd9-4735-803c-a673f0637215"/>
+				<textFieldExpression><![CDATA[$F{Birthdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="382" y="10" width="30" height="20" uuid="50bc32ff-dca9-4d03-8e46-7e3c4857a0ad"/>
+				<textFieldExpression><![CDATA[$F{Age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="10" width="133" height="37" uuid="8e5f613d-1275-462f-b58e-33cc9961ec5a"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="0afb60f1-d95f-43b4-92e3-ff7376e89dd8"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="10" width="26" height="20" uuid="050e8a75-0724-401f-b822-2d3f281ca819"/>
+				<textFieldExpression><![CDATA[$F{PatientID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
